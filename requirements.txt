@@ -1,0 +1,5 @@
+langchain==0.3.25
+langchain_community==0.3.24
+langchain_core==0.3.63
+langchain_google_genai==2.1.5
+streamlit==1.44.1
