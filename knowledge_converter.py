@@ -17,7 +17,7 @@ def convert_to_vector(items, urls):
     print(f'total documents: {len(items)}')
     for idx, item in enumerate(items):
 
-        print(item)
+        #print(item)
 
         doc = Document(page_content=item, metadata={"web source": urls[idx]})
         documents.append(doc)
