@@ -104,8 +104,10 @@ with st.sidebar:
                     st.session_state.db = kc.convert_to_vector(data['result'], data['urls'])
 
                     retrieved = st.session_state.db.similarity_search("What is the name of the company?", k=3)
-                    for r in retrieved:
-                        print("✅ Match found:", r.page_content[:200])
+
+                    # uncomment for debug
+                    # for r in retrieved:
+                    #    print("✅ Match found:", r.page_content[:200])
 
                     # prep for qna
                     st.session_state.qna_chain = qna.qna_define(st.session_state.db, st.session_state.llm)
